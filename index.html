@@ -14,15 +14,24 @@
       background-color: #f0f0f0;
     }
 
-    .bar-div {
+     .bar-div {
       display: inline-grid;
-      grid-template-columns: auto auto auto auto auto auto auto;
       vertical-align: middle;
       padding-left: 4rem;
       padding-top: 3rem;
       width: min(100% -30px, 840px);
       margin-inline: auto;
+    }
+    @media (min-width: 481px) {
+        .bar-div {
+            grid-template-columns: repeat(7, auto);
+        }
+    }
 
+    @media (max-width: 480px) {
+        .bar-div {
+            grid-template-columns: repeat(2, auto);
+        }
     }
 
     #title {
